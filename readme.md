@@ -17,6 +17,8 @@ The first step is to make ffmpeg available to the script.
 ### Mac:
 - brew install ffmpeg
 
+### After you installed ffmpeg:
+
 After you installed ffmpeg, you can run 'pip install youtube-dl', than you are done with the setup phase.
 
 Now you can create your videos.txt file, which is supposed to contain the video links you want to download.
