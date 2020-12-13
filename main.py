@@ -5,8 +5,6 @@
 # run the script
 from __future__ import unicode_literals
 
-import concurrent
-import subprocess
 import multiprocessing.dummy
 
 import youtube_dl

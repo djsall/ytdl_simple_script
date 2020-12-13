@@ -25,8 +25,12 @@ Now you can create your videos.txt file, which is supposed to contain the video 
 
 After you have your list of links, just run the script and wait for all downloads to finish.
 
-The script will spit out 320 mp3 files.
+### The script will spit out 320 mp3 files.
 
 Small disclaimer: they are converted from YouTube's already lossy conversion, which is also a lossy compression of the original audio the video was exported with, which also was most likely exported with lossy compression. 
 
 Also, even the video editor could have used an already lossy file, so sometimes you can get meh quality from youtube rips, but I've only had a few bad experiences.
+
+### Performance
+
+The script is multi-threaded, so it should be decent, but on long videos it won't spawn as many threads as on shorter videos.
