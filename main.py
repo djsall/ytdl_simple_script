@@ -5,6 +5,10 @@
 # run the script
 from __future__ import unicode_literals
 
+import concurrent
+import subprocess
+import multiprocessing.dummy
+
 import youtube_dl
 
 ydl_opts = {
@@ -19,6 +23,11 @@ ydl_opts = {
 with open('videos.txt') as f:
   lines = [line.rstrip() for line in f]
 
-for line in lines:
+
+def download(link):
   with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-    ydl.download([line])
+    ydl.download([link])
+
+
+p = multiprocessing.dummy.Pool()
+p.map(download, lines)
